@@ -1,0 +1,139 @@
+@media (max-width: 1640px) {
+    html {
+        font-size: 53%;
+    }
+}
+
+@media (max-width: 1420px), (max-height:800px) {
+    html {
+        font-size: 43%;
+    }
+}
+
+@media (max-width: 1150px) {
+    html {
+        font-size: 33%;
+    }
+}
+
+@media (max-width: 1050px), (max-height:650px) {
+    #pc_auth_otp_right_contents button {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 890px) {
+    html {
+        font-size: 30%;
+    }
+}
+
+@media (max-width: 815px) {
+    .section_left_wrap {
+        padding: 0 8rem;
+    }
+}
+
+@media (max-width:765px) {
+    #pc-header #gnb li a, #pc-header #language {
+        margin-right: 3rem;
+    }
+}
+
+@media (max-width: 700px) {
+    html {
+        font-size: 28%;
+    }
+}
+
+@media (max-width: 650px) {
+    #pc-header #gnb li a, #pc-header #language {
+        margin-right: 2rem;
+    }
+
+    .section_left_wrap {
+        padding: 0 5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        font-size: 2.6rem;
+    }
+
+    input {
+        font-size: 2.5rem;
+    }
+
+    #pc-header #gnb li a, #pc-header #language {
+        margin-right: 1.5rem;
+    }
+
+    .section_right_wrap {
+        padding: 5rem;
+    }
+
+    .page_select {
+        max-width: 63rem;
+    }
+    
+    .page_select > button span {
+        font-size: 2.6rem;
+    }
+    
+    .faq_title_section {
+        margin-bottom: 0;
+    }
+
+    #faq_list_search {
+        margin: 1.5rem 0 0.7rem;
+    }
+
+    #pc_sign-in_login_field > li > h3,
+     #pc_auth_otp_right_contents h3,
+     #pc_auth_setPass_right_contents > ul > li > h3 {
+        font-size: 2.9rem;
+    }
+
+    .auto_log_r > span {
+        font-size: 2.2rem;
+    }
+
+    /* mfa 버튼 삭제시 지우기 */
+    #pc_auth_npass_right_contents button.btn2 {
+        font-size: 3rem;
+        border: none;
+    }
+
+    #pc_auth_setPass_right_contents > ul > li > input {
+        font-size: 1.9rem;
+    }
+
+    .pc_error-page_background img {
+        right: -5%;
+        width: 70rem;
+    }
+    
+}
+
+@media (max-width: 585px) {
+    html {
+        font-size: 25%;
+    }
+
+    .section_left_wrap {
+        padding: 0 3rem;
+    }
+}
+
+@media (max-height: 400px) {
+    html {
+        font-size: 22%;
+    }
+}
+
+@media (max-height: 300px) {
+    html {
+        font-size: 18%;
+    }
+}

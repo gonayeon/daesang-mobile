@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout/mobile-default-layout.html}"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title th:text="#{page.title.mobile.signIn}">[DAESANG SSL VPN] MOBILE SIGN-IN</title>
+
+    <th:block layout:fragment="css">
+        <link rel="stylesheet" th:href="@{/css/mobile/authenticate/sign-in.css}">
+    </th:block>
+
+    <th:block layout:fragment="script">
+        <script>
+            const pageName = "MOBILE_SIGN-IN";
+            const passwordCheckCount = [[${passwordCheckCount}]];
+        </script>
+        <script type="text/javascript" th:src="@{/js/mobile/authenticate/sign-in.js}"></script>
+    </th:block>          
+</head>
+<body>
+    <div class="m-contents-section inner" layout:fragment="contents-section" id="m_id-pw_contents_section">
+        <div id="m_id-pw_contents">
+            <div id="m_id-pw_logo" class="m_logo_section">
+                <img class="m_logo_common_style" src="/images/mobile/m_background_logo.png" alt="대상로고">
+            </div>
+            <div id="m_id-pw_guide" class="m_guide_section">
+                <h3 class="m_guide_common-style_up" th:text="#{mobile.authenticate.idPw.guideMent.title.login}">임직원 로그인</h3>
+                <p class="m_guide_common-style_down" th:text="#{mobile.authenticate.idPw.guideMent.forUse}">임직원 인증을 수행하여 주세요.</p>
+            </div>
+            <div id="m_id-pw_input">
+                <ul>
+                    <li id="m_id-pw_company_select">
+                        <h3 th:text="#{mobile.authenticate.idPw.inputSection.title.company}">회사</h3>
+                        <div>
+                            <div id="m_id-pw_toggle_feild">
+                                <div class="toggle-header">
+                                    <span th:text="#{mobile.authenticate.idPw.inputSection.backgroundWord.company}">회사선택</span>
+                                    <div>
+                                        <img class="down_arrow" src="/images/notice_arrow_down.png" alt="▼">
+                                        <img class="up_arrow hidden" src="/images/notice_arrow_up.png" alt="▲">
+                                    </div>
+                                </div>
+                            </div>
+                            <ul id="m_id-pw_company_list">
+                                <li th:each="vpnCompCode : ${vpnCompCodes}">
+                                    <span th:text="${vpnCompCode.compName}" th:id="'compCd_'+${vpnCompCode.compCd} +'_'+${vpnCompCode.passwordUseYn}  +'_'+${vpnCompCode.mdmUseYn}"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li id="m_id-pw_id">
+                        <h3 th:text="#{mobile.authenticate.idPw.inputSection.title.id}">사번</h3>
+                        <div>
+                            <input maxlength="8" autocomplete="off" type="text" id="m_id-pw_input_id" th:placeholder="#{mobile.authenticate.idPw.inputSection.input.employeeNumber}">
+                        </div>
+                    </li>
+
+                    <li id="m_id-pw_password">
+                        <h3 th:text="#{mobile.authenticate.idPw.inputSection.title.password}">비밀번호</h3>
+                        <div>
+                            <input type="password" id="m_id-pw_input_password" autocomplete="off" th:placeholder="#{mobile.authenticate.idPw.inputSection.input.password}">
+                        </div>   
+                    </li>
+
+                    <li id="m_id-pw_contact-info">
+                        <h3 id="contactInfo-title"></h3>
+                        <div>
+                            <input disabled type="text" id="m_id-pw_input_contact-info">
+                        </div>
+                    </li>
+                </ul>
+
+                <div id="passwordCheckCountDomArea">
+                    <p th:text="#{mobile.authenticate.idPw.failCount.title}">잘못 입력한 횟수 : </p>
+                    <span id="passwordCheckFailCount">0</span> / <span th:text="${passwordCheckCount}"></span>
+                </div>
+            </div>
+
+            <button id="m_id-pw_start_button" class="primary_button" type="button" th:text="#{mobile.authenticate.idPw.button.login}">로그인</button>
+
+            <div id="m_id-pw_auto">
+                <span th:text="#{mobile.authenticate.idPw.autoLogin}">자동 접속</span>
+                <div class="check-box">
+                    <input type="checkbox" class="myCheckbox" id="autoConnectCheckbox" onclick="updateAutoConnectionEnable();">
+                    <label for="autoConnectCheckbox" class="myCheckbox-label"></label>
+                </div>
+            </div>
+
+            <!-- 비밀번호 안내 메세지 dom -->
+            <div id="passwordCheckMessageArea">
+                <ul>
+                    <li>
+                        <img src="/images/otp_i_mark.png" alt="i마크">
+                        <p th:text="#{mobile.authenticate.idPw.passwordCheck.ment1}">비밀번호를 정확히 입력해 주세요.</p>
+                    </li>
+                    <li>
+                        <img src="/images/otp_timer.png" alt="타이머모양">
+                        <p class="pointC" th:text="#{mobile.authenticate.idPw.passwordCheck.ment2}">잘못된 입력이 5회 이상일 시 5분간 로그인이 제한됩니다.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

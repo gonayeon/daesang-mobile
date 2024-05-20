@@ -1,0 +1,136 @@
+<div id="m_modal_show"> <!-- 기존 모달 자리 -->
+
+    <!-- 간편 인증 방식 선택 모달 -->
+    <div class="m-auth-modal-background">
+        <div class="m-auth-modal-wrap auth-method-select-modal">
+            <h3 class="modal-guide" th:utext="#{mobile.modal.selectAuthenticationMethod.guide}">
+                등록할 간편인증 방식을 선택해주세요.
+            </h3>
+            <div class="button-wrap">
+                <button type="button" class="auth-button-style">
+                    <img src="/images/mobile/bio-auth-icon.svg" alt="생체인증">
+                    <span th:text="#{mobile.modal.selectAuthenticationMethod.button.biometricAuthentication}">
+                        생체인증
+                    </span>
+                </button>
+                <button type="button" class="auth-button-style">
+                    <img src="/images/mobile/pattern-auth-icon.svg" alt="패턴">
+                    <span th:text="#{mobile.modal.selectAuthenticationMethod.button.pattern}">
+                        패턴
+                    </span>
+                </button>
+                <button type="button" class="auth-button-style">
+                    <img src="/images/mobile/pin-auth-icon.svg" alt="핀">
+                    <span th:text="#{mobile.modal.selectAuthenticationMethod.button.pin}">
+                        PIN
+                    </span>
+                </button>
+            </div>
+        </div>
+        <button type="button" class="m-auth-modal-close-button">
+            <img src="/images/mobile/m_x_mark_white.svg" alt="닫기 버튼">
+        </button>
+    </div>
+
+    <!-- 심볼 모달 - 페이스 -->
+    <div class="m-auth-modal-background">
+        <div class="m-auth-modal-wrap common-auth-symbol-modal">
+            <img src="/images/mobile/symbol-face-id.svg" alt="Face ID">
+            <span th:text="#{mobile.modal.commonAuthenticationSymbol.id.face}">Face ID</span>
+        </div>
+        <button type="button" class="m-auth-modal-close-button">
+            <img src="/images/mobile/m_x_mark_white.svg" alt="닫기 버튼">
+        </button>
+    </div>
+
+    <!-- 심볼 모달 - 지문 -->
+    <div class="m-auth-modal-background">
+        <div class="m-auth-modal-wrap common-auth-symbol-modal">
+            <img src="/images/mobile/symbol-touch-id.svg" alt="Touch ID">
+            <span th:text="#{mobile.modal.commonAuthenticationSymbol.id.touch}">Touch ID</span>
+        </div>
+        <button type="button" class="m-auth-modal-close-button">
+            <img src="/images/mobile/m_x_mark_white.svg" alt="닫기 버튼">
+        </button>
+    </div>
+
+    <!-- 심볼 모달 - 등록 완료 -->
+    <div class="m-auth-modal-background">
+        <div class="m-auth-modal-wrap common-auth-symbol-modal">
+            <img src="/images/mobile/symbol-complete.svg" alt="간편 인증 등록 완료">
+            <span th:text="#{mobile.modal.commonAuthenticationSymbol.id.pattern}">Pattern ID</span>
+            <!-- <span th:text="#{mobile.modal.commonAuthenticationSymbol.id.pin}">PIN ID</span> -->
+            <!-- <span th:text="#{mobile.modal.commonAuthenticationSymbol.id.face}">Face ID</span> -->
+            <!-- <span th:text="#{mobile.modal.commonAuthenticationSymbol.id.touch}">Touch ID</span> -->
+        </div>
+    </div>
+    
+    <!-- face id 등록 실패 모달 -->
+    <div class="m-auth-modal-background">
+        <div class="m-auth-modal-wrap face-touch-fail-modal">
+            <div class="guide-wrap">
+                <img src="/images/mobile/symbol-face-id-grey.svg" alt="face id">
+                <h3 th:text="#{mobile.modal.faceIdFail.guide.notRecognize}">
+                    얼굴이 인식되지 않습니다.
+                </h3>
+                <p th:text="#{mobile.modal.faceTouchIdFail.guide.tryAgain}">
+                    다시 시도해 주세요.
+                </p>
+            </div>
+            <button type="button" class="button-style" th:text="#{mobile.modal.faceIdFail.button.tryAgain}">
+                Face ID 다시 시도하기
+            </button>
+            <button type="button" class="button-style-cancel" th:text="#{mobile.modal.faceTouchIdFail.button.cancel}">
+                취소
+            </button>
+        </div>
+    </div>
+
+
+    <!-- 지문 인증 실패 모달 -->
+    <div class="m-auth-modal-background">
+        <div class="m-auth-modal-wrap face-touch-fail-modal">
+            <div class="guide-wrap">
+                <img src="/images/mobile/symbol-touch-id.svg" alt="touch id">
+                <h3 th:text="#{mobile.modal.touchIdFail.guide.notRecognize}">
+                    지문이 인식되지 않습니다.
+                </h3>
+                <p th:text="#{mobile.modal.faceTouchIdFail.guide.tryAgain}">
+                    다시 시도해 주세요.
+                </p>
+            </div>
+            <button type="button" class="button-style" th:text="#{mobile.modal.touchIdFail.button.tryAgain}">
+                Touch ID 다시 시도하기
+            </button>
+            <button type="button" class="button-style-cancel" th:text="#{mobile.modal.faceTouchIdFail.button.cancel}">
+                취소
+            </button>
+        </div>
+    </div>
+
+    
+
+</div>
+
+
+
+
+
+<div class="nested-layer">   <!-- 모달 위에 중첩되는 레이어 -->
+
+    <!-- 간편인증 설정 종료 모달 -->
+    <div class="setting-exit-modal">
+        <div class="guide-wrap">
+            <p th:utext="#{mobile.modal.authSettingExit.guide}">
+                설정을 종료하시겠습니까&#63;
+            </p>
+        </div>
+        <button type="button" class="button-style" th:text="#{mobile.modal.authSettingExit.button.yes}">
+            예
+        </button>
+        <button type="button" class="button-style-cancel" th:text="#{mobile.modal.authSettingExit.button.no}">
+            아니오
+        </button>
+    </div>
+    
+</div>

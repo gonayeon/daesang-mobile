@@ -1,0 +1,66 @@
+/* vpn-connect 공통 */
+
+#m_vpn-connect > div {
+    position: relative;
+    height: 100%;
+}
+
+#m_vpn-connect > div > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+}
+
+#m_vpn-connect > div > div > h2 {
+    margin: 0.5em 0 ;
+}
+
+.m_vpn-connect_guide_box {
+    margin-bottom: 3.1em;
+}
+
+.m_vpn-connect_guide_box > h3 {
+    line-height: 27px;
+}
+
+.m_vpn-connect_guide_box > p {
+    font-size: 16px;
+    margin-top: 0.5em;
+}
+
+/**/
+
+@media (max-height: 740px) {
+    #m_vpn-connect img {
+        width: 140px;
+        height: auto;
+    }
+
+    #m_vpn-connect h2 {
+        font-size: 50px;
+    }
+
+    #m_vpn-connect > div > div {
+        top: 0;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 370px) {
+    #m_vpn-connect img {
+        width: 140px;
+        height: auto;
+    }
+
+    #m_vpn-connect h2 {
+        font-size: 50px;
+    }
+
+    #m_vpn-connect > div > div {
+        top: 0;
+        transform: translateX(-50%);
+    }
+}

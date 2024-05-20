@@ -1,0 +1,64 @@
+#mobile_landing_contents h2 {
+    font-size: 14vmin;
+    width: 100%;
+}
+
+.m-contents-section > div {
+    position: relative;
+    height: 100%;
+}
+
+#mobile_landing_contents {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+
+}
+
+#m_landing_guide p {
+    margin: 1.8em 0 2.2em;
+    font-size: 20px;
+}
+
+#m_landing_subGuide p {
+    color: #888B8D;
+    font-size: 15px;
+    margin-top: 2em;
+}
+
+#m_landing_subGuide > p > a {
+    text-decoration: underline;
+}
+
+#m_landing_subGuide > p > a > span {
+    text-decoration: underline;
+    text-decoration-color: #E42312;
+    color: #E42312;
+}
+
+#start-bio-register-button {
+    margin-bottom: 10px;
+}
+
+@media (max-width:355px) {
+    #mobile_landing_contents button {
+        font-size: 26px;
+    }
+}
+
+@media (max-height:720px), (max-width:300px) {
+    #mobile_landing_contents {
+        top: 0;
+        transform: translate(-50%,0);
+    }
+
+    #mobile_landing_contents h2 {
+        padding-top: 20px;
+    }
+
+    #m_landing_subGuide p {
+        margin-bottom: 20px;
+    }
+}

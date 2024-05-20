@@ -1,0 +1,207 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "CJW_Gothic_B";
+    src: url("/font/CJW_Gothic_B.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'SUIT';
+    font-weight: 400;
+    src: url("../../../font/SUIT-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'SUIT';
+    font-weight: 600;
+    src: url("/font/SUIT-SemiBold.ttf") format("truetype");
+}
+
+a:link{text-decoration: none; color: inherit;}
+a:visited{text-decoration: none; color: inherit;}
+a:hover{text-decoration: none; color: inherit;}
+a:active{text-decoration: none; color: inherit;}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: "CJW_Gothic_B", sans-serif;
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
+    letter-spacing: -1px;
+}
+
+h2 { font-size: 64px;}
+h3 { font-size: 20px;}
+p {
+    font-size: 17px;
+    line-height: 20px;
+}
+
+
+.primary_button {
+    font-family: "CJW_Gothic_B", sans-serif;
+    background-color: #E42312;
+    width: 100%;
+    height: 56px;
+    font-size: 28px;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    margin: 0 auto;
+}
+
+.primary_button_reverse {
+    font-family: "CJW_Gothic_B", sans-serif;
+    background-color: #fff;
+    width: 100%;
+    height: 56px;
+    font-size: 28px;
+    color: #E42312;
+    border-radius: 8px;
+    border: 1px solid #E42312;
+    margin: 0 auto;
+}
+
+.secondary_button {
+    font-family: "CJW_Gothic_B", sans-serif;
+    background-color: #fff;
+    width: 100%;
+    height: 56px;
+    font-size: 28px;
+    color: #888B8D;
+    border-radius: 8px;
+    border: 1px solid #888B8D;
+}
+
+button {
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 95%;
+}
+
+input {
+    background-color: transparent;
+    font-family: inherit;
+    color: #888B8D;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+input:disabled {
+    opacity: 0.5;
+}
+
+input[class="errorInput"]::-ms-input-placeholder {
+    color: #E42312;
+}
+
+input[class="errorInput"]::-webkit-input-placeholder {
+    color: #E42312;
+}
+
+input[class="errorInput"]::-moz-placeholder {
+    color: #E42312;
+}
+
+.pointC {
+    color: #E42312 !important;
+}
+
+.subC {
+    color: #888B8D;
+}
+
+button:disabled {
+    background: #888B8D;
+    opacity: 0.5;
+    color: #FFFFFF;
+}
+
+/* 스크롤바 전체에 적용되는 스타일 */
+::-webkit-scrollbar {
+    width: 8px; /* 스크롤바 너비 */
+  }
+  
+  /* 스크롤바 트랙 */
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* 스크롤바 트랙 배경색 */
+    border-radius: 10px;
+  }
+  
+  /* 스크롤바 슬라이더 */
+  ::-webkit-scrollbar-thumb {
+    background-color: #d6d6d6; /* 스크롤바 색상 */
+    border-radius: 10px; /* 스크롤바 둥근 모서리 반지름 */
+  }
+  
+  /* 스크롤바 슬라이더가 마우스 오버 상태일 때 */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #bababa; /* 스크롤바 색상 */
+    border-radius: 10px;
+  }
+
+  #m_id-pw_company_list {
+    z-index: 10000;
+}

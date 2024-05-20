@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout/mobile-default-layout.html}"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title th:text="#{page.title.mobile.vpnOpenFailClient}">[DAESANG SSL VPN] MOBILE VPN OPEN FAIL(CLIENT)</title>
+
+    <th:block layout:fragment="css">
+        <link rel="stylesheet" th:href="@{/css/mobile/vpn/vpn-connect.css}">
+    </th:block>
+
+    <th:block layout:fragment="script">
+        <script>
+            const pageName = "MOBILE_VPN-OPEN-FAIL-CLIENT";
+            const osCode = "[[${osCode}]]";
+            const mdmUseFlag = "[[${mdmUseFlag}]]"
+        </script>
+    </th:block>
+</head>
+<body>
+<div class="m-contents-section inner" layout:fragment="contents-section" id="m_vpn-connect">
+    <div>
+        <div id="m_vpn-connect_fail">
+            <img src="/images/mobile/m_vpn-connect-fail.png" alt="x마크">
+            <h2 th:text="#{mobile.vpn-open.fail.client.title}">
+                VPN 접속 실패
+            </h2>
+            <div class="m_vpn-connect_guide_box">
+                <h3 th:utext="#{mobile.vpn-open.fail.client.guide.problem.reinstall}" class="subC">
+                    접속 프로그램에 이상이 있습니다.<br>프로그램 재설치 후 재로그인하세요.
+                </h3>
+                <p th:utext="#{mobile.vpn-open.fail.client.guide.downloadLink}" class="subC">
+                    아래의 <span class="pointC">버튼</span>을 눌러 VPN Agent 설치 링크로 이동하세요.
+                </p>
+            </div>
+
+            <button type="button" class="primary_button" th:text="#{mobile.vpn-open.fail.client.button}", onclick="downloadVpnClient(osCode, mdmUseFlag)">
+                설치 링크로 이동하기
+            </button>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

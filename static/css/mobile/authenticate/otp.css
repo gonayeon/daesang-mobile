@@ -1,0 +1,158 @@
+#m_otp_contents {
+    height: 100%;
+    color: #888B8D;
+}
+
+#m_otp_contents > div {
+    font-size: 14px;
+}
+
+.m_guide_section {
+    margin-bottom: 1.9em;
+}
+
+input[type="checkbox"].myCheckbox {
+    display: none; 
+}
+
+label.myCheckbox-label {
+    display: inline-block;
+    width: 30px; 
+    height: 30px;
+    border: 1px solid #888B8D;
+    border-radius: 6px; 
+    background-color: #fff;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+input[type="checkbox"].myCheckbox:checked + label.myCheckbox-label {
+    background-image: url('/images/check.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#m_otp_input > ul > li {
+    border: 1px solid #888B8D;
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+#m_otp_input > ul > li > h3 {
+    width: 35%;
+    text-align: center;
+    font-size: 16px;
+}
+
+#m_otp_input > ul > li > div {
+    padding: 0 20px 0 5px;
+    align-items: center;
+    width: 65%;
+    height: 56px;
+    line-height: 56px;
+}
+
+#m_otp_wrongCount {
+    margin: 0.5em 0;
+    text-align: right;
+}
+
+#m_otp_wrongCount > p {
+    display: inline;
+    font-size: 15px;
+}
+
+#m_otp_appLink_send_button {
+    margin-top: 5px;
+}
+
+#m_otp_auto {
+    margin-top: 1.8em;
+}
+
+#m_otp_auto > ul > li {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 7px;
+}
+
+#m_otp_auto > ul > li > img {
+    width: 12px;
+    margin-right: 6px;
+}
+
+#m_otp_auto > ul > li > p {
+    font-size: 15px;
+    vertical-align: baseline;
+    line-height: 25px;
+}
+
+/*#m_otp_auto > ul > li:last-child > p {
+    color: #E42312;
+}*/
+
+#m_otp_input > ul > li.login-failed {
+    border: 1px solid #E42312;
+    color: #E42312;
+  }
+  
+  #m_otp_input > ul > li.login-failed > h3 {
+    color: #E42312;
+  }
+  
+  #m_otp_input > ul > li.login-failed > div > input::placeholder {
+    color: #E42312;
+  }
+
+  .wrongCount_more4 {
+    color: #E42312;
+  }
+
+
+
+
+  #m_id-pw_auto {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 30px;
+    margin: 0.4em 0;
+}
+
+#m_id-pw_auto > span {
+    color: #888B8D;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#m_id-pw_auto .check-box {
+    vertical-align: middle;
+    margin: 0.938em 0 ;
+}
+
+input[type="checkbox"].myCheckbox {
+    display: none; 
+}
+
+label.myCheckbox-label {
+    display: inline-block;
+    width: 30px; 
+    height: 30px;
+    border: 1px solid #888B8D;
+    border-radius: 6px; 
+    background-color: #fff;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+input[type="checkbox"].myCheckbox:checked + label.myCheckbox-label {
+    background-image: url('/images/check.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}

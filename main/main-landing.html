@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/mobile-default-layout.html}"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title th:text="#{page.title.mobile.mainLading}">[DAESANG SSL VPN] MOBILE MAIN LANDING</title>
+
+    <th:block layout:fragment="css">
+        <link rel="stylesheet" th:href="@{/css/mobile/main/mobile-landing.css}" >
+    </th:block>
+
+    <th:block layout:fragment="script">
+        <script>
+            const pageName = "MOBILE_MAIN";
+            const osCode = "[[${osCode}]]";
+            const npassAppAgentFileRef = "[[${npassAppAgentFileRef}]]";
+        </script>
+        <script type="text/javascript" th:src="@{/js/mobile/main/main-landing.js}"></script>
+    </th:block>
+</head>
+<body>
+    <div class="m-contents-section inner" layout:fragment="contents-section">
+        <div>
+            <div id="mobile_landing_contents">
+                <h2 th:utext="#{mobile.landing.contents.title.vpnUserAccess}" style="white-space: normal;">
+                    대상
+                    <br>사용자
+                    <br>간편 인증
+                </h2>
+
+                <div id="m_landing_guide">
+                    <p th:utext="#{mobile.landing.contents.guideMent.pushButton}">
+                        간편 인증 등록을 위해 아래의 버튼을 눌러주세요.
+                        <br>모바일 VPN 접속은 메뉴 버튼을 눌러
+                        <br>VPN 접속을 선택해 주세요.
+                    </p>
+                </div>
+
+                <button sec:authorize="isAnonymous()" id="start-bio-register-button" class="primary_button" type="button" th:text="#{mobile.landing.contents.button.startBioRegister}" onclick="checkTwoAuthenticateDeviceManagement();">간편 인증 등록하기</button>
+                <button sec:authorize="isAuthenticated()" id="start-bio-register-button" class="primary_button" type="button" th:text="#{mobile.landing.contents.button.startBioRegister}" onclick="moveToDeviceManagement();">간편 인증 등록하기</button>
+
+                <div id="m_landing_subGuide">
+                    <p th:utext="#{mobile.landing.contents.guideMent.agentDownload}">
+                        VPN 접속을 위해
+                        <a onclick="downloadVpnAgent(osCode, npassAppAgentFileRef)">접속 프로그램&#40;<span>VPN Client</span>&#41;</a>
+                        를 설치해주세요.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+#pc-header {
+    width: 100%;
+    color: #888B8D;
+    height: 11%;
+}
+
+#pc-header nav {
+    height: 100%;
+}
+
+#pc-header #gnb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    font-size: 2.6rem;
+    text-align: center;
+    height: 100%;
+}
+
+#gnb #signOutButton {
+    font-size: 2.6rem;
+}
+
+#gnb > div {
+    display: flex;
+}
+
+#pc-header #gnb li a {
+    margin-right: 5.8rem;
+    height: 2.6rem;
+    cursor: pointer;
+}
+
+#pc-header #language {
+    display: inline-block;
+    margin-right: 5.8rem;
+    position: relative;
+    height: 2.6rem;
+}
+
+#pc-header #language ul {
+    position: absolute;
+    top: 3.5rem;
+    background-color: #fff;
+    width: 100%;
+    z-index: 10;
+}
+
+#pc-header #language ul li {
+    height: 3rem;
+    line-height: 3rem;
+    text-align: left;
+    font-size: 2rem;
+    text-indent: 0.5rem;
+}
+
+#pc-header .toggle-button {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    cursor: pointer;
+}
+
+#pc-header .toggle-button img {
+    width: 1.7rem;
+    height: auto;
+}
+
+#pc-header .toggle-button span {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+#gnb button {
+    border: none;
+    border-bottom: 0.1rem solid #E42312;
+    background-color: transparent;
+    font-size: inherit;
+    color: #E42312;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#logo-home-button {
+    display: inline-block;
+    width: 12.5rem;
+    background: url(../../../images/daesang-home-logo.png) no-repeat  center;
+    background-size: contain;
+}

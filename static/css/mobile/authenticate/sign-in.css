@@ -1,0 +1,235 @@
+#m_id-pw_contents {
+    height: 100%;
+    color: #888B8D;
+}
+
+#m_id-pw_guide > p {
+    margin-bottom: 1.3em;
+}
+
+#m_id-pw_auto {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#m_id-pw_auto > span {
+    margin-right: 10px;
+}
+
+#m_id-pw_auto .check-box {
+    vertical-align: middle;
+    margin: 0.938em 0 ;
+}
+
+input[type="checkbox"].myCheckbox {
+    display: none; 
+}
+
+label.myCheckbox-label {
+    display: inline-block;
+    width: 30px; 
+    height: 30px;
+    border: 1px solid #888B8D;
+    border-radius: 6px; 
+    background-color: #fff;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+input[type="checkbox"].myCheckbox:checked + label.myCheckbox-label {
+    background-image: url('/images/check.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#m_id-pw_input_id, #m_id-pw_input_password {
+    width: 100%;
+    height: 100%;
+}
+
+#m_id-pw_input_id {
+    text-transform: uppercase;
+}
+
+#m_id-pw_input > ul > li {
+    border: 1px solid #888B8D;
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    margin-top: 7px;
+    align-items: center;
+}
+
+#m_id-pw_input > ul > li > h3 {
+    width: 25%;
+    text-align: center;
+    font-size: 16px;
+}
+
+#m_id-pw_input > ul > li > div {
+    padding: 0 20px 0 5px;
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#m_id-pw_company_select > div {
+    position: relative;
+}
+
+#m_id-pw_toggle_feild {
+    width: 100%;
+    height: 100%;
+}
+
+#m_id-pw_toggle_feild .toggle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.toggle-header > span {
+    font-size: 16px;
+}
+
+.toggle-header img {
+    vertical-align: middle;
+}
+
+#m_id-pw_company_list {
+    border: 1px solid #888B8D;
+    background-color: #fff;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    width: 100%;
+    height: 222px;
+    border-radius: 8px;
+    overflow: auto;
+    display: none;
+}
+
+#m_id-pw_company_list > li {
+    display: block;
+    width: 100%;
+    padding-right: 35px;
+}
+
+#m_id-pw_company_list > li:hover {
+    background-color: rgba(157,157,156,0.1);
+}
+
+#m_id-pw_company_list > li:hover > span {
+    color: rgba(0,0,0,0.6);
+}
+
+#m_id-pw_company_list > li > span {
+    display: block;
+    border-bottom: 2px solid rgba(157,157,156,0.3);
+    text-indent: 20px;
+    color: rgba(136,139,141,0.6);
+    height: 36px;
+    line-height: 36px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#m_id-pw_company_list > li:last-child > span {
+    border-bottom: none;
+}
+
+
+#m_id-pw_input > ul > li.login-failed {
+    border: 1px solid #E42312;
+    color: #E42312;
+}
+
+#m_id-pw_input > ul > li.login-failed > h3 {
+    color: #E42312;
+}
+
+#m_id-pw_input > ul > li.login-failed > div > input::placeholder {
+    color: #E42312;
+}
+
+li.login-failed .toggle-header > div > img {
+    filter: sepia(100%) hue-rotate(0deg) saturate(10000%) brightness(100%);
+    filter: invert(53%) sepia(100%) saturate(5532%) hue-rotate(348deg) brightness(99%) contrast(105%);
+}
+
+#m_id-pw_input > ul > li#m_id-pw_password {
+    display: none;
+}
+
+#m_id-pw_input > ul > li#m_id-pw_contact-info {
+    display: none;
+}
+
+#passwordCheckCountDomArea {
+    display: none;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+#passwordCheckCountDomArea p {
+    text-align: right;
+    font-size: 15px;
+}
+
+#passwordCheckCountDomArea span {
+    font-size: 15px;
+}
+
+#passwordCheckMessageArea {
+    display: none;
+}
+#passwordCheckMessageArea li {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#passwordCheckMessageArea li p {
+    font-size: 15px;
+    max-width: 280px;
+    width: 100%;
+}
+
+#passwordCheckMessageArea img {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+#passwordCheckMessageArea .pointC {
+    color: #E42312;
+}
+
+#m_id-pw_start_button {
+    margin-top: 0.8em;
+}
+
+/* 페이지전환 버튼 위치 고정 - 나중에 삭제해야될 부분 */
+#pageTurnButtonWarp {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+#pageTurnButtonWarp button {
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+/**/

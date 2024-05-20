@@ -1,0 +1,104 @@
+#m_device-management > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#m_device-management_title_section {
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+#m_device-management_title {
+    height: 100%;
+}
+
+#m_device-management_title h3 {
+    padding: 15px 0;
+}
+
+#m_device-management_title p {
+    color: #888B8D;
+    overflow: hidden;
+}
+
+#m_device-management_contents_section {
+    border-top: 1px solid #888B8D;
+    width: 100%;
+}
+
+#m_device-management_contents > ul {
+    margin-top: 1.8em;
+}
+
+#m_device-management_contents > ul > li {
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    padding: 15px;
+}
+
+.m_device-management_contents_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.m_device-management_list_title > div {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.m_device-management_list_title > div > span {
+    font-size: 15px;
+    color: #888B8D;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+.m_device-management_list_title > span {
+    color: #E42312;
+    font-size: 17px;
+}
+
+.m_device-management_button {
+    border: none;
+    background-color: transparent;
+    margin-left: 10px;
+}
+
+#m_device-management_button_device_add {
+    border: 1px dashed #888B8D;
+    border-radius: 8px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    padding: 15px;
+    font-size: 17px;
+    color: #888B8D;
+    margin-top: 1.8em;
+}
+
+.m_device-management_contents_detail > ul > li {
+    margin-bottom: 2em;
+}
+
+.m_device-management_contents_detail > ul > li:last-child {
+    margin-bottom: 0;
+}
+
+.m_device-management_contents_detail p {
+    font-size: 14px;
+    color: #888B8D;
+    margin-top: 0.8em;
+}
+
+#m_device-management_detail_show {
+    margin-top: 2.5em;
+}

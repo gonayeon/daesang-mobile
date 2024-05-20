@@ -1,0 +1,61 @@
+#m_2-factor_button_mail {
+    margin: 1.3em auto 0.3em;
+}
+
+#m_2-factor_sub_guide {
+    display: flex;
+}
+
+#m_2-factor_sub_guide > img {
+    width: 12px;
+    height: 12px;
+    margin: 7px 5px 0 0;
+}
+
+#m_2-factor_sub_guide > p {
+    color: #888B8D;
+    font-size: 15px;
+    line-height: 26px;
+}
+
+
+
+#m_id-pw_auto {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 30px;
+    margin: 0.4em 0;
+}
+
+#m_id-pw_auto > span {
+    color: #888B8D;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#m_id-pw_auto .check-box {
+    vertical-align: middle;
+    margin: 0.938em 0 ;
+}
+
+input[type="checkbox"].myCheckbox {
+    display: none; 
+  }
+  
+  label.myCheckbox-label {
+    display: inline-block;
+    width: 30px; 
+    height: 30px;
+    border: 1px solid #888B8D;
+    border-radius: 6px; 
+    background-color: #fff;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  
+  input[type="checkbox"].myCheckbox:checked + label.myCheckbox-label {
+    background-image: url('/images/check.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
