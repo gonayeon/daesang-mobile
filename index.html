@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#91;DAESANG SSL VPN&#93; MOBILE MAIN LANDING</title>
+
+    <link rel="stylesheet" href="/static/css/common/mobile-common.css">
+    <link rel="stylesheet" href="/static/css/main/mobile-landing.css">
+    <link rel="stylesheet" href="/static/css/tailwind/output.css">
+
+    <script src="/static/js/library/jquery-3.7.0.min.js"></script>
+    <script src="/static/js/common.js"></script>
+</head>
+<body>
+    <header class="inner" id="mobile-header">
+        <button class="m_hamburger_button" onclick="sideMenuSlide();">
+            <img src="/static/images/m_hamburger_button.png" alt="메뉴버튼">
+        </button>
+        <a href="/" class="absolute left-1/2 -translate-x-1/2">
+            <img src="/static/images/m_logo.png" alt="로고">
+        </a>
+    </header>
+
+    <div id="side_dim">
+        <nav id="side_bar">
+            <div class="side_inner" id="side_logo_section">
+                <a href="/">
+                    <img src="/static/images/m_sidebar_npass.png" alt="npass로고">
+                </a>
+            </div>
+            <ul class="side_menu">
+                <li>
+                    <div class="language_toggle" >
+                        <span>한국어</span>
+                        <div class="toggle_arrow_box">
+                            <img class="m_down_arrow" src="/static/images/m_arrow_down.png" alt="아래화살표">
+                            <img class="m_up_arrow" src="/static/images/m_arrow_up.png" alt="위화살표">
+                        </div>
+                    </div>
+                    <ul class="language_toggle_list" id="language">
+                        <li id="language_ko" onclick="selectLanguage(this);">한국어</li>
+                        <li id="language_en" onclick="selectLanguage(this);">영어</li>
+                    </ul>
+                </li>
+    
+                <li>
+                    <a href="notice-list.html">공지사항</a>
+                </li>
+    
+                <li>
+                    <a href="faq-list.html">FAQ</a>
+                </li>
+    
+                <li>
+                    <a href="device-management.html">디바이스 관리</a>
+                </li>
+    
+                <li>
+                    <a href="vpn-open-start.html">VPN 접속</a>
+                </li>
+    
+                <li>
+                    <a href="/">로그아웃</a>
+                </li>
+            </ul>
+            <div class="side_bottom">
+                <a href="#">도움이 필요하신가요&#63;</a>
+            </div>
+        </nav>
+    </div>
+
+    <main class="m-contents-section inner">
+        <div>
+            <div id="mobile_landing_contents">
+                <h2 class="whitespace-normal leading-none font-medium">
+                    대상<br>사용자<br>간편 인증
+                </h2>
+
+                <div id="m_landing_guide">
+                    <p class="font-medium">
+                        간편 인증 등록을 위해 아래의 버튼을 눌러주세요.<br>모바일 VPN 접속은 메뉴 버튼을 눌러<br>VPN 접속을 선택해 주세요.
+                    </p>
+                </div>
+
+                <button id="start-bio-register-button" class="primary_button" type="button">간편 인증 등록하기</button>
+
+                <div id="m_landing_subGuide">
+                    <p>
+                        VPN 접속을 위해
+                        <a>접속 프로그램&#40;<span>VPN Client</span>&#41;</a>
+                        를 설치해주세요.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="background_logo"></div>
+</body>
+</html>

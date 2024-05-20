@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#91;DAESANG SSL VPN&#93; MOBILE NOTICE</title>
+    
+    <link rel="stylesheet" href="/static/css/common/mobile-common.css">
+    <link rel="stylesheet" href="/static/css/notice/mobile-notice.css">
+    <link rel="stylesheet" href="/static/css/tailwind/output.css">
+
+    <script src="/static/js/library/jquery-3.7.0.min.js"></script>
+    <script src="/static/js/common.js"></script>
+</head>
+<body>
+    <header class="inner" id="mobile-header">
+        <button class="m_hamburger_button" onclick="sideMenuSlide();">
+            <img src="/static/images/m_hamburger_button.png" alt="메뉴버튼">
+        </button>
+        <a href="/" class="absolute left-1/2 -translate-x-1/2">
+            <img src="/static/images/m_logo.png" alt="로고">
+        </a>
+    </header>
+
+    <div id="side_dim">
+        <nav id="side_bar">
+            <div class="side_inner" id="side_logo_section">
+                <a href="/">
+                    <img src="/static/images/m_sidebar_npass.png" alt="npass로고">
+                </a>
+            </div>
+            <ul class="side_menu">
+                <li>
+                    <div class="language_toggle" >
+                        <span>한국어</span>
+                        <div class="toggle_arrow_box">
+                            <img class="m_down_arrow" src="/static/images/m_arrow_down.png" alt="아래화살표">
+                            <img class="m_up_arrow" src="/static/images/m_arrow_up.png" alt="위화살표">
+                        </div>
+                    </div>
+                    <ul class="language_toggle_list" id="language">
+                        <li id="language_ko" onclick="selectLanguage(this);">한국어</li>
+                        <li id="language_en" onclick="selectLanguage(this);">영어</li>
+                    </ul>
+                </li>
+    
+                <li>
+                    <a href="notice-list.html">공지사항</a>
+                </li>
+    
+                <li>
+                    <a href="faq-list.html">FAQ</a>
+                </li>
+    
+                <li>
+                    <a href="device-management.html">디바이스 관리</a>
+                </li>
+    
+                <li>
+                    <a href="vpn-open-start.html">VPN 접속</a>
+                </li>
+    
+                <li>
+                    <a href="/">로그아웃</a>
+                </li>
+            </ul>
+            <div class="side_bottom">
+                <a href="#">도움이 필요하신가요&#63;</a>
+            </div>
+        </nav>
+    </div>
+
+    <main id="m_notice" class="m-contents-section inner">
+        <div>
+            <div id="m_notice_title_section">
+                <div id="m_notice_title">
+                    <h3>공지사항</h3>
+                    <p>새로운 공지사항을 알려드립니다.</p>
+                </div>
+                <div id="m_notice_search-box">
+                    <input id="m-notice-searchKeyword" type="search" placeholder="검색어를 입력해주세요." autocomplete="off">
+                    <img src="/static/images/m_search.png" alt="돋보기모양">
+                </div>
+            </div>
+            <div id="m_notice_contents_section">
+                <div class="contents_scroll" id="m_notice_contents">
+                    <ul id="m-notice-list-area">
+                        <!-- 게시물 없을 경우 -->
+                        <!-- <li>게시물이 존재하지 않습니다.</li> -->
+                        <li>
+                            <div class="m_notice_contents_title" onclick="openNoticeContent(this)">
+                                <div class="m_notice_toggle-header">
+                                    <h3>공지사항 00</h3>
+                                    <div class="m_contents_toggle_arrow-box">
+                                        <img class="m_line_arrow_down" src="/static/images/m_line_arrow_down.png" alt="아래화살표">
+                                        <img class="m_line_arrow_up" src="/static/images/m_line_arrow_up.png" alt="위화살표">
+                                    </div>
+                                </div>
+                                <span>2024-05-20</span>
+                            </div>
+                            <div class="m_notice_contents_detail">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur repellendus dolor temporibus expedita cumque alias est quod laboriosam maiores, repellat amet accusamus cum dolores a vitae at quia vero. Vel.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="m_notice_contents_title" onclick="openNoticeContent(this)">
+                                <div class="m_notice_toggle-header">
+                                    <h3>공지사항 01</h3>
+                                    <div class="m_contents_toggle_arrow-box">
+                                        <img class="m_line_arrow_down" src="/static/images/m_line_arrow_down.png" alt="아래화살표">
+                                        <img class="m_line_arrow_up" src="/static/images/m_line_arrow_up.png" alt="위화살표">
+                                    </div>
+                                </div>
+                                <span>2024-05-20</span>
+                            </div>
+                            <div class="m_notice_contents_detail">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur repellendus dolor temporibus expedita cumque alias est quod laboriosam maiores, repellat amet accusamus cum dolores a vitae at quia vero. Vel.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="m_notice_contents_title" onclick="openNoticeContent(this)">
+                                <div class="m_notice_toggle-header">
+                                    <h3>공지사항 02</h3>
+                                    <div class="m_contents_toggle_arrow-box">
+                                        <img class="m_line_arrow_down" src="/static/images/m_line_arrow_down.png" alt="아래화살표">
+                                        <img class="m_line_arrow_up" src="/static/images/m_line_arrow_up.png" alt="위화살표">
+                                    </div>
+                                </div>
+                                <span>2024-05-20</span>
+                            </div>
+                            <div class="m_notice_contents_detail">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur repellendus dolor temporibus expedita cumque alias est quod laboriosam maiores, repellat amet accusamus cum dolores a vitae at quia vero. Vel.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="m_notice_contents_title" onclick="openNoticeContent(this)">
+                                <div class="m_notice_toggle-header">
+                                    <h3>공지사항 03</h3>
+                                    <div class="m_contents_toggle_arrow-box">
+                                        <img class="m_line_arrow_down" src="/static/images/m_line_arrow_down.png" alt="아래화살표">
+                                        <img class="m_line_arrow_up" src="/static/images/m_line_arrow_up.png" alt="위화살표">
+                                    </div>
+                                </div>
+                                <span>2024-05-20</span>
+                            </div>
+                            <div class="m_notice_contents_detail">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur repellendus dolor temporibus expedita cumque alias est quod laboriosam maiores, repellat amet accusamus cum dolores a vitae at quia vero. Vel.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="m_notice_contents_title" onclick="openNoticeContent(this)">
+                                <div class="m_notice_toggle-header">
+                                    <h3>공지사항 04</h3>
+                                    <div class="m_contents_toggle_arrow-box">
+                                        <img class="m_line_arrow_down" src="/static/images/m_line_arrow_down.png" alt="아래화살표">
+                                        <img class="m_line_arrow_up" src="/static/images/m_line_arrow_up.png" alt="위화살표">
+                                    </div>
+                                </div>
+                                <span>2024-05-20</span>
+                            </div>
+                            <div class="m_notice_contents_detail">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur repellendus dolor temporibus expedita cumque alias est quod laboriosam maiores, repellat amet accusamus cum dolores a vitae at quia vero. Vel.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="m_notice_contents_title" onclick="openNoticeContent(this)">
+                                <div class="m_notice_toggle-header">
+                                    <h3>공지사항 05</h3>
+                                    <div class="m_contents_toggle_arrow-box">
+                                        <img class="m_line_arrow_down" src="/static/images/m_line_arrow_down.png" alt="아래화살표">
+                                        <img class="m_line_arrow_up" src="/static/images/m_line_arrow_up.png" alt="위화살표">
+                                    </div>
+                                </div>
+                                <span>2024-05-20</span>
+                            </div>
+                            <div class="m_notice_contents_detail">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur repellendus dolor temporibus expedita cumque alias est quod laboriosam maiores, repellat amet accusamus cum dolores a vitae at quia vero. Vel.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="background_logo"></div>
+    
+</body>
+</html>

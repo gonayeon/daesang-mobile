@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#91;DAESANG SSL VPN&#93; MOBILE DEVICE MANAGEMENT</title>
+
+    <link rel="stylesheet" href="/static/css/common/mobile-common.css">
+    <link rel="stylesheet" href="/static/css/tailwind/output.css">
+</head>
+<body>
+    <header class="inner border border-yellow-500" id="mobile-header">
+        <button class="m_hamburger_button">
+            <img src="/static/images/m_hamburger_button.png" alt="메뉴버튼">
+        </button>
+        <a href="/" class="absolute left-1/2 -translate-x-1/2">
+            <img src="/static/images/m_logo.png" alt="로고">
+        </a>
+    </header>
+
+    <div>
+        <main class="m-contents-section inner border border-purple-500">
+            
+        </main>
+        <div class="background_logo"></div>
+    </div>
+
+    <div id="side_dim">
+        <nav id="side_bar">
+            <div class="side_inner" id="side_logo_section">
+                <a href="/">
+                    <img src="/static/images/m_sidebar_npass.png" alt="npass로고">
+                </a>
+            </div>
+            <ul class="side_menu">
+                <li>
+                    <a>
+                        <div class="language_toggle">
+                            <span>한국어</span>
+                            <div class="toggle_arrow_box">
+                                <img class="m_down_arrow" src="/static/images/m_arrow_down.png" alt="아래화살표">
+                                <img class="m_up_arrow" src="/static/images/m_arrow_up.png" alt="위화살표">
+                            </div>
+                        </div>
+                    </a>
+                    <ul class="language_toggle_list" id="language">
+                        <li id="language_ko">한국어</li>
+                        <li id="language_en">영어</li>
+                    </ul>
+                </li>
+    
+                <li>
+                    <a href="notice-list.html">공지사항</a>
+                </li>
+    
+                <li>
+                    <a href="faq-list.html">FAQ</a>
+                </li>
+    
+                <li>
+                    <a href="device-management.html">디바이스 관리</a>
+                </li>
+    
+                <li>
+                    <a href="vpn-open-start.html">VPN 접속</a>
+                </li>
+    
+                <li>
+                    <a href="/">로그아웃</a>
+                </li>
+            </ul>
+            <div class="side_bottom">
+                <a href="#">도움이 필요하신가요&#63;</a>
+            </div>
+        </nav>
+    </div>
+<div class="m-contents-section inner" layout:fragment="contents-section" id="m_device-management">
+    <div>
+        <div id="m_device-management_title_section">
+            <div id="m_device-management_title">
+                <h3 th:text="#{mobile.device-management.title}">디바이스 관리</h3>
+                <p th:text="#{mobile.device-management.message}">간편 인증 단말을 변경합니다.</p>
+            </div>
+        </div>
+
+        <div id="m_device-management_contents_section">
+            <div id="m_device-management_contents"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

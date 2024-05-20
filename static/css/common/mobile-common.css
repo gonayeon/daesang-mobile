@@ -1,0 +1,163 @@
+/* @import "mobile-reset.css"; */
+@import "mobile-header.css";
+@import "mobile-sidebar.css";
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.m-contents-section {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px);
+}
+
+.background_logo {
+    position: fixed;
+    top: 51%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    background: url(/static/images/m_background_logo.png) no-repeat center/cover;
+    opacity: 0.1;
+    z-index: -200;
+}
+
+.inner {
+    padding: 0 20px;
+    padding-top: env(safe-area-inset-top);
+}
+
+/* 컨텐츠 로고 공통 */
+div.m_logo_section {
+    text-align: center;
+}
+
+img.m_logo_common_style {
+    width: 123px;
+    height: auto;
+    margin: 2em 0;
+}
+
+/* 컨텐츠 로고 밑 가이드 */
+.m_guide_section .m_guide_common-style_up {
+    color: #000;
+    line-height: 25px;
+    margin-bottom: 0.4em;
+}
+
+.m_guide_section .m_guide_common-style_down {
+    color: #888b8d;
+    line-height: 20px;
+}
+
+.primary_button {
+    background-color: #e42312;
+    width: 100%;
+    height: 56px;
+    font-size: 28px;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    margin: 0 auto;
+}
+
+.primary_button_reverse {
+    background-color: #fff;
+    width: 100%;
+    height: 56px;
+    font-size: 28px;
+    color: #e42312;
+    border-radius: 8px;
+    border: 1px solid #e42312;
+    margin: 0 auto;
+}
+
+.secondary_button {
+    background-color: #fff;
+    width: 100%;
+    height: 56px;
+    font-size: 28px;
+    color: #888b8d;
+    border-radius: 8px;
+    border: 1px solid #888b8d;
+}
+
+button {
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 95%;
+}
+
+input {
+    background-color: transparent;
+    font-family: inherit;
+    color: #888b8d;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+input:disabled {
+    opacity: 0.5;
+}
+
+input[class="errorInput"]::-ms-input-placeholder {
+    color: #e42312;
+}
+
+input[class="errorInput"]::-webkit-input-placeholder {
+    color: #e42312;
+}
+
+input[class="errorInput"]::-moz-placeholder {
+    color: #e42312;
+}
+
+.pointC {
+    color: #e42312 !important;
+}
+
+.subC {
+    color: #888b8d;
+}
+
+button:disabled {
+    background: #888b8d;
+    opacity: 0.5;
+    color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6d6d6;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #bababa;
+    border-radius: 10px;
+}
+
+#m_id-pw_company_list {
+    z-index: 10000;
+}
