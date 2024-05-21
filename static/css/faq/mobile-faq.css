@@ -67,13 +67,14 @@
 
 #m_faq_contents_category > ul button {
     border: 1px solid #888B8D;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 7px 17px;
-    font-family: "CJW_Gothic_B", sans-serif;
     font-size: 16px;
     background-color: #fff;
     color: #888B8D;
+    font-weight: 500;
     margin: 0 7px 7px 0;
+    line-height: 1;
 }
 
 #m_faq_contents_category > ul > li:last-child button {

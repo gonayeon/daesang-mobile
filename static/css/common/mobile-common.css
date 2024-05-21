@@ -35,7 +35,8 @@ section {
 
 /* 컨텐츠 로고 공통 */
 div.m_logo_section {
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 img.m_logo_common_style {
@@ -89,7 +90,6 @@ img.m_logo_common_style {
 }
 
 button {
-    font-family: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,7 +98,6 @@ button {
 
 input {
     background-color: transparent;
-    font-family: inherit;
     color: #888b8d;
     outline: none;
     border: none;

@@ -6,24 +6,22 @@
     <title>&#91;DAESANG SSL VPN&#93; MOBILE VPN OPEN START</title>
 
     <link rel="stylesheet" href="/static/css/common/mobile-common.css">
-    <link rel="stylesheet" href="/static/css/tailwind/output.css">       
+    <link rel="stylesheet" href="/static/css/common/mobile-modal.css">
+    <link rel="stylesheet" href="/static/css/vpn/vpn-open-start.css">
+    <link rel="stylesheet" href="/static/css/tailwind/output.css">      
+    
+    <script src="/static/js/library/jquery-3.7.0.min.js"></script>
+    <script src="/static/js/common.js"></script>
 </head>
 <body>
-    <header class="inner border border-yellow-500" id="mobile-header">
-        <button class="m_hamburger_button">
+    <header class="inner" id="mobile-header">
+        <button class="m_hamburger_button" onclick="sideMenuSlide();">
             <img src="/static/images/m_hamburger_button.png" alt="메뉴버튼">
         </button>
         <a href="/" class="absolute left-1/2 -translate-x-1/2">
             <img src="/static/images/m_logo.png" alt="로고">
         </a>
     </header>
-
-    <div>
-        <main class="m-contents-section inner border border-purple-500">
-            
-        </main>
-        <div class="background_logo"></div>
-    </div>
 
     <div id="side_dim">
         <nav id="side_bar">
@@ -34,18 +32,16 @@
             </div>
             <ul class="side_menu">
                 <li>
-                    <a>
-                        <div class="language_toggle">
-                            <span>한국어</span>
-                            <div class="toggle_arrow_box">
-                                <img class="m_down_arrow" src="/static/images/m_arrow_down.png" alt="아래화살표">
-                                <img class="m_up_arrow" src="/static/images/m_arrow_up.png" alt="위화살표">
-                            </div>
+                    <div class="language_toggle" >
+                        <span>한국어</span>
+                        <div class="toggle_arrow_box">
+                            <img class="m_down_arrow" src="/static/images/m_arrow_down.png" alt="아래화살표">
+                            <img class="m_up_arrow" src="/static/images/m_arrow_up.png" alt="위화살표">
                         </div>
-                    </a>
+                    </div>
                     <ul class="language_toggle_list" id="language">
-                        <li id="language_ko">한국어</li>
-                        <li id="language_en">영어</li>
+                        <li id="language_ko" onclick="selectLanguage(this);">한국어</li>
+                        <li id="language_en" onclick="selectLanguage(this);">영어</li>
                     </ul>
                 </li>
     
@@ -60,9 +56,9 @@
                 <li>
                     <a href="device-management.html">디바이스 관리</a>
                 </li>
-    
+                <!--  -->
                 <li>
-                    <a href="vpn-open-start.html">VPN 접속</a>
+                    <a onclick="loadingModalOn();">VPN 접속</a>
                 </li>
     
                 <li>
@@ -70,22 +66,26 @@
                 </li>
             </ul>
             <div class="side_bottom">
-                <a href="#">도움이 필요하신가요&#63;</a>
+                <a href="/static/guide/ds_vpn_ssp_guide_mobile_ko.pdf">도움이 필요하신가요&#63;</a>
             </div>
         </nav>
     </div>
-    <div class="m-contents-section inner" layout:fragment="contents-section" id="m_vpn_open_start_contents_section">
+
+    <main class="m-contents-section inner" id="m_vpn_open_start_contents_section">
         <div id="m_vpn_open_start_contents">
             <div id="m_vpn_open_start_logo" class="m_logo_section">
-                <img class="m_logo_common_style" src="/images/mobile/m_background_logo.png" alt="대상로고">
+                <img class="m_logo_common_style" src="/static/images/m_background_logo.png" alt="대상로고">
             </div>
             <div id="m_avpn_open_start_guide" class="m_guide_section">
-                <h3 class="m_guide_common-style_up" th:text="#{mobile.vpn.open-start.message1}">인증이 정상적으로 완료되었습니다.</h3>
-                <p class="m_guide_common-style_down" th:utext="#{mobile.vpn.open-start.message2}">VPN 접속하기를 눌러 VPN 접속을 수행해 주세요.</p>
+                <h3 class="m_guide_common-style_up">인증이 정상적으로 완료되었습니다.</h3>
+                <p class="m_guide_common-style_down">VPN 접속하기를 눌러 VPN 접속을 수행해 주세요.</p>
             </div>
 
-            <button id="m_vpn_open_start_button" class="primary_button" type="button" th:text="#{mobile.vpn.open-start.button}" onclick="vpnTunnelingOpen();">VPN 접속하기</button>
+            <button type="button" id="m_vpn_open_start_button" class="primary_button">VPN 접속하기</button>
         </div>
-    </div>
+    </main>
+    <div class="background_logo"></div>
+
+    <div id="m_modal_show"></div>
 </body>
 </html>

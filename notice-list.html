@@ -6,6 +6,7 @@
     <title>&#91;DAESANG SSL VPN&#93; MOBILE NOTICE</title>
     
     <link rel="stylesheet" href="/static/css/common/mobile-common.css">
+    <link rel="stylesheet" href="/static/css/common/mobile-modal.css">
     <link rel="stylesheet" href="/static/css/notice/mobile-notice.css">
     <link rel="stylesheet" href="/static/css/tailwind/output.css">
 
@@ -57,7 +58,7 @@
                 </li>
     
                 <li>
-                    <a href="vpn-open-start.html">VPN 접속</a>
+                    <a onclick="loadingModalOn();">VPN 접속</a>
                 </li>
     
                 <li>
@@ -65,7 +66,7 @@
                 </li>
             </ul>
             <div class="side_bottom">
-                <a href="#">도움이 필요하신가요&#63;</a>
+                <a href="/static/guide/ds_vpn_ssp_guide_mobile_ko.pdf">도움이 필요하신가요&#63;</a>
             </div>
         </nav>
     </div>
@@ -183,6 +184,8 @@
         </div>
     </main>
     <div class="background_logo"></div>
+
+    <div id="m_modal_show"></div>
     
 </body>
 </html>

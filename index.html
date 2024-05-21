@@ -6,6 +6,7 @@
     <title>&#91;DAESANG SSL VPN&#93; MOBILE MAIN LANDING</title>
 
     <link rel="stylesheet" href="/static/css/common/mobile-common.css">
+    <link rel="stylesheet" href="/static/css/common/mobile-modal.css">
     <link rel="stylesheet" href="/static/css/main/mobile-landing.css">
     <link rel="stylesheet" href="/static/css/tailwind/output.css">
 
@@ -55,9 +56,9 @@
                 <li>
                     <a href="device-management.html">디바이스 관리</a>
                 </li>
-    
+                <!--  -->
                 <li>
-                    <a href="vpn-open-start.html">VPN 접속</a>
+                    <a onclick="loadingModalOn();">VPN 접속</a>
                 </li>
     
                 <li>
@@ -65,7 +66,7 @@
                 </li>
             </ul>
             <div class="side_bottom">
-                <a href="#">도움이 필요하신가요&#63;</a>
+                <a href="/static/guide/ds_vpn_ssp_guide_mobile_ko.pdf">도움이 필요하신가요&#63;</a>
             </div>
         </nav>
     </div>
@@ -83,7 +84,7 @@
                     </p>
                 </div>
 
-                <button id="start-bio-register-button" class="primary_button" type="button">간편 인증 등록하기</button>
+                <button type="button" id="start-bio-register-button" class="primary_button" onclick="location.href='sign-in.html'">간편 인증 등록하기</button>
 
                 <div id="m_landing_subGuide">
                     <p>
@@ -96,5 +97,7 @@
         </div>
     </main>
     <div class="background_logo"></div>
+
+    <div id="m_modal_show"></div>
 </body>
 </html>

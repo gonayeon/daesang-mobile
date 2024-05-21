@@ -1,6 +1,6 @@
 #m_id-pw_contents {
     height: 100%;
-    color: #888B8D;
+    color: #888b8d;
 }
 
 #m_id-pw_guide > p {
@@ -11,39 +11,32 @@
     display: flex;
     align-items: center;
     justify-content: end;
-}
-
-#m_id-pw_auto > span {
-    margin-right: 10px;
+    gap: 10px;
 }
 
 #m_id-pw_auto .check-box {
-    vertical-align: middle;
-    margin: 0.938em 0 ;
+    margin: 0.938em 0;
 }
 
-input[type="checkbox"].myCheckbox {
-    display: none; 
+.myCheckbox {
+    display: none;
 }
 
-label.myCheckbox-label {
-    display: inline-block;
-    width: 30px; 
+.myCheckbox-label {
+    display: block;
+    width: 30px;
     height: 30px;
-    border: 1px solid #888B8D;
-    border-radius: 6px; 
+    border: 1px solid #9d9d9c;
+    border-radius: 6px;
     background-color: #fff;
-    cursor: pointer;
-    vertical-align: middle;
 }
 
-input[type="checkbox"].myCheckbox:checked + label.myCheckbox-label {
-    background-image: url('/images/check.png');
-    background-repeat: no-repeat;
-    background-position: center;
+.myCheckbox-label:has(.myCheckbox:checked) {
+    background: #fff url("/static/images/m_check_mark.png") no-repeat center;
 }
 
-#m_id-pw_input_id, #m_id-pw_input_password {
+#m_id-pw_input_id,
+#m_id-pw_input_password {
     width: 100%;
     height: 100%;
 }
@@ -53,7 +46,7 @@ input[type="checkbox"].myCheckbox:checked + label.myCheckbox-label {
 }
 
 #m_id-pw_input > ul > li {
-    border: 1px solid #888B8D;
+    border: 1px solid #888b8d;
     background-color: #fff;
     display: flex;
     width: 100%;
@@ -94,10 +87,6 @@ input[type="checkbox"].myCheckbox:checked + label.myCheckbox-label {
     cursor: pointer;
 }
 
-.hidden {
-    display: none;
-}
-
 .toggle-header > span {
     font-size: 16px;
 }
@@ -107,7 +96,7 @@ input[type="checkbox"].myCheckbox:checked + label.myCheckbox-label {
 }
 
 #m_id-pw_company_list {
-    border: 1px solid #888B8D;
+    border: 1px solid #888b8d;
     background-color: #fff;
     position: absolute;
     top: 59px;
@@ -126,18 +115,18 @@ input[type="checkbox"].myCheckbox:checked + label.myCheckbox-label {
 }
 
 #m_id-pw_company_list > li:hover {
-    background-color: rgba(157,157,156,0.1);
+    background-color: rgba(157, 157, 156, 0.1);
 }
 
 #m_id-pw_company_list > li:hover > span {
-    color: rgba(0,0,0,0.6);
+    color: rgba(0, 0, 0, 0.6);
 }
 
 #m_id-pw_company_list > li > span {
     display: block;
-    border-bottom: 2px solid rgba(157,157,156,0.3);
+    border-bottom: 2px solid rgba(157, 157, 156, 0.3);
     text-indent: 20px;
-    color: rgba(136,139,141,0.6);
+    color: rgba(136, 139, 141, 0.6);
     height: 36px;
     line-height: 36px;
     white-space: nowrap;
@@ -149,27 +138,23 @@ input[type="checkbox"].myCheckbox:checked + label.myCheckbox-label {
     border-bottom: none;
 }
 
-
 #m_id-pw_input > ul > li.login-failed {
-    border: 1px solid #E42312;
-    color: #E42312;
+    border: 1px solid #e42312;
+    color: #e42312;
 }
 
 #m_id-pw_input > ul > li.login-failed > h3 {
-    color: #E42312;
+    color: #e42312;
 }
 
 #m_id-pw_input > ul > li.login-failed > div > input::placeholder {
-    color: #E42312;
+    color: #e42312;
 }
 
 li.login-failed .toggle-header > div > img {
     filter: sepia(100%) hue-rotate(0deg) saturate(10000%) brightness(100%);
-    filter: invert(53%) sepia(100%) saturate(5532%) hue-rotate(348deg) brightness(99%) contrast(105%);
-}
-
-#m_id-pw_input > ul > li#m_id-pw_password {
-    display: none;
+    filter: invert(53%) sepia(100%) saturate(5532%) hue-rotate(348deg)
+        brightness(99%) contrast(105%);
 }
 
 #m_id-pw_input > ul > li#m_id-pw_contact-info {
@@ -177,8 +162,8 @@ li.login-failed .toggle-header > div > img {
 }
 
 #passwordCheckCountDomArea {
-    display: none;
     margin-top: 10px;
+    display: flex;
     justify-content: flex-end;
 }
 
@@ -191,12 +176,11 @@ li.login-failed .toggle-header > div > img {
     font-size: 15px;
 }
 
-#passwordCheckMessageArea {
-    display: none;
-}
 #passwordCheckMessageArea li {
     display: flex;
-    margin-bottom: 10px;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 5px;
 }
 
 #passwordCheckMessageArea li p {
@@ -208,12 +192,10 @@ li.login-failed .toggle-header > div > img {
 #passwordCheckMessageArea img {
     width: 12px;
     height: 12px;
-    margin-right: 5px;
-    margin-top: 2px;
 }
 
 #passwordCheckMessageArea .pointC {
-    color: #E42312;
+    color: #e42312;
 }
 
 #m_id-pw_start_button {

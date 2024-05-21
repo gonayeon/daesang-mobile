@@ -27,10 +27,6 @@
     width: 100%;
 }
 
-#m_device-management_contents > ul {
-    margin-top: 1.8em;
-}
-
 #m_device-management_contents > ul > li {
     border: 1px solid #000;
     background-color: #fff;
@@ -47,14 +43,14 @@
 
 .m_device-management_list_title > div {
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
 }
 
 .m_device-management_list_title > div > span {
     font-size: 15px;
     color: #888B8D;
-    margin-left: 10px;
     margin-top: 3px;
 }
 
@@ -82,11 +78,11 @@
     padding: 15px;
     font-size: 17px;
     color: #888B8D;
-    margin-top: 1.8em;
+    margin-bottom: 1.75rem;
 }
 
 .m_device-management_contents_detail > ul > li {
-    margin-bottom: 2em;
+    margin-bottom: 1.5rem;
 }
 
 .m_device-management_contents_detail > ul > li:last-child {
@@ -96,9 +92,9 @@
 .m_device-management_contents_detail p {
     font-size: 14px;
     color: #888B8D;
-    margin-top: 0.8em;
+    margin-top: 0.2rem;
 }
 
 #m_device-management_detail_show {
-    margin-top: 2.5em;
+    margin-top: 1.7rem;
 }

@@ -6,24 +6,22 @@
     <title>&#91;DAESANG SSL VPN&#93; MOBILE DEVICE MANAGEMENT</title>
 
     <link rel="stylesheet" href="/static/css/common/mobile-common.css">
+    <link rel="stylesheet" href="/static/css/common/mobile-modal.css">
+    <link rel="stylesheet" href="/static/css/device/device-management.css">
     <link rel="stylesheet" href="/static/css/tailwind/output.css">
+
+    <script src="/static/js/library/jquery-3.7.0.min.js"></script>
+    <script src="/static/js/common.js"></script>
 </head>
 <body>
-    <header class="inner border border-yellow-500" id="mobile-header">
-        <button class="m_hamburger_button">
+    <header class="inner" id="mobile-header">
+        <button class="m_hamburger_button" onclick="sideMenuSlide();">
             <img src="/static/images/m_hamburger_button.png" alt="메뉴버튼">
         </button>
         <a href="/" class="absolute left-1/2 -translate-x-1/2">
             <img src="/static/images/m_logo.png" alt="로고">
         </a>
     </header>
-
-    <div>
-        <main class="m-contents-section inner border border-purple-500">
-            
-        </main>
-        <div class="background_logo"></div>
-    </div>
 
     <div id="side_dim">
         <nav id="side_bar">
@@ -34,18 +32,16 @@
             </div>
             <ul class="side_menu">
                 <li>
-                    <a>
-                        <div class="language_toggle">
-                            <span>한국어</span>
-                            <div class="toggle_arrow_box">
-                                <img class="m_down_arrow" src="/static/images/m_arrow_down.png" alt="아래화살표">
-                                <img class="m_up_arrow" src="/static/images/m_arrow_up.png" alt="위화살표">
-                            </div>
+                    <div class="language_toggle" >
+                        <span>한국어</span>
+                        <div class="toggle_arrow_box">
+                            <img class="m_down_arrow" src="/static/images/m_arrow_down.png" alt="아래화살표">
+                            <img class="m_up_arrow" src="/static/images/m_arrow_up.png" alt="위화살표">
                         </div>
-                    </a>
+                    </div>
                     <ul class="language_toggle_list" id="language">
-                        <li id="language_ko">한국어</li>
-                        <li id="language_en">영어</li>
+                        <li id="language_ko" onclick="selectLanguage(this);">한국어</li>
+                        <li id="language_en" onclick="selectLanguage(this);">영어</li>
                     </ul>
                 </li>
     
@@ -62,7 +58,7 @@
                 </li>
     
                 <li>
-                    <a href="vpn-open-start.html">VPN 접속</a>
+                    <a onclick="loadingModalOn();">VPN 접속</a>
                 </li>
     
                 <li>
@@ -70,23 +66,71 @@
                 </li>
             </ul>
             <div class="side_bottom">
-                <a href="#">도움이 필요하신가요&#63;</a>
+                <a href="/static/guide/ds_vpn_ssp_guide_mobile_ko.pdf">도움이 필요하신가요&#63;</a>
             </div>
         </nav>
     </div>
-<div class="m-contents-section inner" layout:fragment="contents-section" id="m_device-management">
-    <div>
-        <div id="m_device-management_title_section">
-            <div id="m_device-management_title">
-                <h3 th:text="#{mobile.device-management.title}">디바이스 관리</h3>
-                <p th:text="#{mobile.device-management.message}">간편 인증 단말을 변경합니다.</p>
+
+    <main id="m_device-management" class="m-contents-section inner">
+        <div>
+            <div id="m_device-management_title_section">
+                <div id="m_device-management_title">
+                    <h3>디바이스 관리</h3>
+                    <p>간편 인증 단말을 변경합니다.</p>
+                </div>
+            </div>
+    
+            <div id="m_device-management_contents_section" class="h-[calc(100%-93px-15px)]">
+                <div id="m_device-management_contents" class="mt-7 overflow-auto h-[calc(100%-40px)]">
+                    <!-- 단말이 존재하지 않을 경우 -->
+                    <button id="m_device-management_button_device_add">
+                        <img src="/static/images/m_plus.png">
+                        <span class="leading-none">인증 단말 추가</span>
+                    </button>
+                    <ul>
+                        <li>
+                            <div class="m_device-management_contents_title">
+                                <div class="m_device-management_list_title">
+                                    <div>
+                                        <h3>device model name</h3>
+                                        <span>2024-05-21</span>
+                                    </div>
+                                    <span>현재 접속 기기입니다.</span>
+                                </div>
+                                <button class="m_device-management_button" type="button"><!-- onclick="mfaConfirmModalOn(${mfaDeviceInfo.mfaDeviceId})" -->
+                                    <img class="m_three-dot" src="/static/images/m_three-dot.png">
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                    <div id="m_device-management_detail_show">
+                        <div class="m_device-management_contents_detail">
+                            <ul class="deviceInfoDom">
+                                <li>
+                                    <h3>모델명</h3>
+                                    <p>SM-T501</p>
+                                </li>
+                                <li>
+                                    <h3>등록일자</h3>
+                                    <p>2024-05-21 11:19</p>
+                                </li>
+                                <li>
+                                    <h3>OS</h3>
+                                    <p>ios</p>
+                                </li>
+                                <li>
+                                    <h3>인증방식</h3>
+                                    <p>Touch ID</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </main>
+    <div class="background_logo"></div>
 
-        <div id="m_device-management_contents_section">
-            <div id="m_device-management_contents"></div>
-        </div>
-    </div>
-</div>
+    <div id="m_modal_show"></div>
 </body>
 </html>
